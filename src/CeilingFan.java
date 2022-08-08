@@ -19,10 +19,8 @@ public class CeilingFan {
 
     /** Speed Cord */
     public void pullSpeedCord(){
-        speed+=1;
-        if(speed==4){
-            speed=0;
-        }
+        // modulus
+        speed = (speed + 1) % 4;
     }
 
     /** Rotation Cord */

@@ -12,7 +12,9 @@ public class FanDriver
         System.out.println("Press S to pull a cord which increases speed. When the speed reaches max @ 3, it will reset.\nPress R to pull a cord which changes the fans rotation. \n Press L to stop the program.");
 
         while(keyboard.hasNext()) {
-            input = keyboard.next();
+            // upoper case 
+            input = keyboard.next().toUpperCase();
+            //input = keyboard.next();
             if (input.equals("s") || input.equals("S")) {
                 nFan.pullSpeedCord();
                 System.out.println("ZOOM\n");
