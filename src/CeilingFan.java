@@ -1,26 +1,30 @@
 import java.util.HashMap;
 public class CeilingFan {
+
     private int speed;
     private boolean rev;
-    // implement hash
-    HashMap<Integer, String> map = new HashMap<>();
+    private final HashMap<Integer, String> map = new HashMap<>();
 
     /** Constructor that creates a default fan */
     public CeilingFan() {
-        speed=0;
-        rev=false;
+        this.speed=0;
+        this.rev=false;
+        CeilingFanHashMap();
+    }
+
+    private void CeilingFanHashMap(){
         map.put(0,"OFF");
         map.put(1,"SLOW");
         map.put(2,"MID");
         map.put(3,"FAST");
     }
 
+
     /** Non-standard mutator methods */
 
     /** Speed Cord */
     public void pullSpeedCord(){
-        // modulus
-        speed = (speed + 1) % 4;
+        setSpeed((getSpeed()+1) % 4);
     }
 
     /** Rotation Cord */
@@ -35,6 +39,9 @@ public class CeilingFan {
         return speed;
     }
 
+    private void setSpeed(int speed) {
+        this.speed = speed;
+    }
     /** Return Spin Direction */
     public String getRev(){
         String s = "Fan is not spinning";
