@@ -1,3 +1,6 @@
+// author: bryson
+// date: august 9 2022
+
 import java.util.HashMap;
 public class CeilingFan {
 

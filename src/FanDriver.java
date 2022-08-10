@@ -1,3 +1,6 @@
+// author: bryson
+// date: august 9 2022
+
 import javax.sound.midi.SysexMessage;
 import java.io.InputStream;
 import java.util.Scanner;
